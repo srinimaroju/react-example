@@ -1,15 +1,17 @@
 pipeline {
-  agent {
-    node {
-      label 'Integration'
+    environment { 
+        Integration = 'true'
     }
-
-  }
-  stages {
-    stage('SCM') {
-      steps {
-        sh 'npm install'
-      }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Unit Test') {
+            steps {
+                sh 'npm test'
+            }
+        }
     }
-  }
 }
