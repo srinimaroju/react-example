@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment { 
         Integration = 'true'
-        env.NODEPATH = '/Users/a206105996/.jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodejS_10.4.1'
+        NODEPATH = '/Users/a206105996/.jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodejS_10.4.1'
     }
     stages {
         stage('Build') {
