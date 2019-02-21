@@ -1,5 +1,6 @@
-agent any
+
 pipeline {
+    agent any
     environment { 
         Integration = 'true'
     }
