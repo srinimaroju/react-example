@@ -1,6 +1,7 @@
-
 pipeline {
     agent any
+    triggers{ cron('* * * * *') }
+    triggers{ pollSCM('H */4 * * 1-5') }
     environment { 
         Integration = 'true'
     }
